@@ -60,12 +60,17 @@
               <a class="btn btn-primary" href="/" target="_blank"><i class="icon-home icon-white"></i>Home</a>
             </div>
             <div class="btn-group" data-toggle="buttons-radio">
+              <button type="button" id="undo" class="btn btn-primary"><i class="icon-edit icon-white"></i>Undo</button>
+              <button type="button" class="btn btn-primary" id="redo"><i class="icon-eye-close icon-white"></i>redo</button>
+            </div>
+            <div class="btn-group" data-toggle="buttons-radio">
               <button type="button" id="edit" class="btn btn-primary active"><i class="icon-edit icon-white"></i>Edit</button>
               <button type="button" class="btn btn-primary" id="devpreview"><i class="icon-eye-close icon-white"></i>Developer</button>
               <button type="button" class="btn btn-primary" id="sourcepreview"><i class="icon-eye-open icon-white"></i>Preview</button>
             </div>
             <div class="btn-group">
               <button type="button" class="btn btn-primary" data-target="#downloadModal" rel="/build/downloadModal" role="button" data-toggle="modal"><i class="icon-chevron-down icon-white"></i>Download</button>
+              <button type="button" class="btn btn-primary" data-target="#importModal" rel="/build/importModal" role="button" data-toggle="modal"><i class="icon-chevron-down icon-white"></i>Import/Export</button>
               <button class="btn btn-primary" href="#clear" id="clear"><i class="icon-trash icon-white"></i>Clear</button>
             </div>
           </li>
@@ -466,7 +471,7 @@
               </ul>
               </span> </span>
               <div class="preview">Image</div>
-              <div class="view"> <img alt="140x140" src="img/a.jpg"> </div>
+              <div class="view"> <img alt="140x140" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/img/a.jpg"> </div>
             </div>
 			  <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button> </span>
               <div class="preview">Dashboard <span class="label label-important">NEW!</span></div>
@@ -929,7 +934,7 @@
               <div class="view">
                 <ul class="thumbnails">
                   <li class="span4">
-                    <div class="thumbnail"> <img alt="300x200" src="img/people.jpg">
+                    <div class="thumbnail"> <img alt="300x200" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/img/people.jpg">
                       <div class="caption" contenteditable="true">
                         <h3>Thumbnail label</h3>
                         <p> Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.</p>
@@ -938,7 +943,7 @@
                     </div>
                   </li>
                   <li class="span4">
-                    <div class="thumbnail"> <img alt="300x200" src="img/city.jpg">
+                    <div class="thumbnail"> <img alt="300x200" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/img/city.jpg">
                       <div class="caption" contenteditable="true">
                         <h3>Thumbnail label</h3>
                         <p> Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.</p>
@@ -947,7 +952,7 @@
                     </div>
                   </li>
                   <li class="span4">
-                    <div class="thumbnail"> <img alt="300x200" src="img/sports.jpg">
+                    <div class="thumbnail"> <img alt="300x200" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/img/sports.jpg">
                       <div class="caption" contenteditable="true">
                        <h3>Thumbnail label</h3>
                         <p> Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.</p>
@@ -977,7 +982,7 @@
             <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button> <a class="btn btn-mini" href="#" rel="well">Well</a> </span>
               <div class="preview">Media Object</div>
               <div class="view">
-                <div class="media"> <a href="#" class="pull-left"> <img src="img/a_002.jpg" class="media-object"> </a>
+                <div class="media"> <a href="#" class="pull-left"> <img src="https://rawgit.com/nenads/BootstrapPageGenerator/master/img/a_002.jpg" class="media-object"> </a>
                   <div class="media-body" contenteditable="true">
                     <h4 class="media-heading">Nested Media Header</h4>
                    Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.</div>
@@ -2009,19 +2014,19 @@
                     <li data-slide-to="2" data-target="#myCarousel" class=""></li>
                   </ol>
                   <div class="carousel-inner">
-                    <div class="item active"> <img alt="" src="img/1.jpg">
+                    <div class="item active"> <img alt="" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/img/1.jpg">
                       <div class="carousel-caption" contenteditable="true">
                         <h4>First Thumbnail Label</h4>
                         <p>Bacon ipsum dolor sit amet ground round culpa elit, irure incididunt short ribs tongue sed. Chicken swine cupidatat deserunt. Tongue short ribs bacon bresaola sausage. Rump biltong ribeye tri-tip tenderloin kielbasa. Meatloaf consequat voluptate dolor pork belly t-bone, turducken cow sunt sint.</p>
                       </div>
                     </div>
-                    <div class="item"> <img alt="" src="img/2.jpg">
+                    <div class="item"> <img alt="" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/img/2.jpg">
                       <div class="carousel-caption" contenteditable="true">
                         <h4>Second Thumbnail Label</h4>
                         <p>Flank drumstick culpa ground round mollit enim turducken eu bacon pork chop. Prosciutto short loin est short ribs drumstick pork loin salami cillum hamburger beef excepteur veniam meatloaf. Turducken consectetur jowl occaecat eu pancetta sunt ut pork loin. Non shank boudin frankfurter bresaola.</p>
                       </div>
                     </div>
-                    <div class="item"> <img alt="" src="img/3.jpg">
+                    <div class="item"> <img alt="" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/img/3.jpg">
                       <div class="carousel-caption" contenteditable="true">
                         <h4>Third Thumbnail Label</h4>
                         <p>Veniam in aute, consequat hamburger mollit nisi leberkas chuck ut prosciutto drumstick short loin frankfurter. Aute salami duis voluptate magna kielbasa swine in. Magna pancetta chuck, aliqua laboris ribeye consectetur jerky prosciutto culpa voluptate brisket sausage bresaola. Jerky ut hamburger tempor, ribeye qui pastrami veniam shoulder.</p>
@@ -2102,7 +2107,20 @@
       <textarea></textarea>
     </p>
   </div>
-  <div class="modal-footer"> <a class="btn" data-dismiss="modal" onclick="javascript:saveHtml();">Save</a> </div>
+  <div class="modal-footer"> <a class="btn" data-dismiss="modal" onclick="javascript:saveHtml();">Import / Export raw data</a> </div>
+</div>
+<div class="modal hide fade" role="dialog" id="importModal">
+  <div class="modal-header"> <a class="close" data-dismiss="modal">×</a>
+    <h3>Save</h3>
+  </div>
+  <div class="modal-body">
+    <p>You can modify sorce data(copy/paste).</p>
+    <br>
+    <p>
+      <textarea id="layoutData"></textarea>
+    </p>
+  </div>
+  <div class="modal-footer"> <a class="btn" data-dismiss="modal" onclick="javascript:importLayout();">Ok</a> </div>
 </div>
 </div>
 <script>

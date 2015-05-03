@@ -45,6 +45,56 @@ function saveLayout(){
 	});*/
 }
 
+//TODO:: helper just to have some import or export make it more robus when backend is operational
+function exportLayout(){
+	var data = layouthistory;
+	if (!data) {
+		data={};
+		data.count = 0;
+		data.list = [];
+	}
+	if (data.list.length>data.count) {
+		for (i=data.count;i<data.list.length;i++)
+			data.list[i]=null;
+	}
+	data.list[data.count] = window.demoHtml;
+	data.count++;
+	if (supportstorage()) {
+		localStorage.setItem("layoutdata",JSON.stringify(data));
+	}
+	//layouthistory = data;
+
+	$('#layoutData').val(JSON.stringify(data));
+	//console.log(data);
+	/*$.ajax({  
+		type: "POST",  
+		url: "/build/saveLayout",  
+		data: { layout: $('.demo').html() },  
+		success: function(data) {
+			//updateButtonsVisibility();
+		}
+	});*/
+}
+
+//TODO:: helper just to have some import or export make it more robus when backend is operational
+function importLayout(){
+
+	var data = $('#layoutData').val();
+	localStorage.setItem("layoutdata",data);
+	//layouthistory = data;
+	restoreData();
+	//console.log(data);
+	/*$.ajax({  
+		type: "POST",  
+		url: "/build/saveLayout",  
+		data: { layout: $('.demo').html() },  
+		success: function(data) {
+			//updateButtonsVisibility();
+		}
+	});*/
+}
+
+
  function downloadLayout(){
 	
 	$.ajax({  
@@ -286,6 +336,7 @@ function downloadLayoutSrc() {
 	});
 	$("#download-layout").html(formatSrc);
 	$("#downloadModal textarea").empty();
+	$("#importModal textarea").empty();
 	$("#downloadModal textarea").val(formatSrc)
 	webpage = formatSrc;
 }
@@ -408,6 +459,10 @@ $(document).ready(function() {
 		downloadHtmlLayout();
 		return false
 	});
+	$("[data-target=#importModal]").click(function(e) {
+		e.preventDefault();
+		exportLayout();
+	});
 	$("#edit").click(function() {
 		$("body").removeClass("devpreview sourcepreview");
 		$("body").addClass("edit");
@@ -470,7 +525,7 @@ $(document).ready(function() {
 
 function saveHtml() 
 			{
-			webpage = '<html>\n<head>\n<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>\n<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>\n<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">\n<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>\n</head>\n<body>\n'+ webpage +'\n</body>\n</html>'
+			webpage = '<html>\n<head>\n<script type="text/javascript" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/js/jquery-2.0.0.min.js"></script>\n<script type="text/javascript" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/js/jquery-ui.js"></script>\n<link href="https://rawgit.com/nenads/BootstrapPageGenerator/master/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">\n<script type="text/javascript" src="https://rawgit.com/nenads/BootstrapPageGenerator/master/js/bootstrap.min.js"></script>\n</head>\n<body>\n'+ webpage +'\n</body>\n</html>'
 			/* FM aka Vegetam Added the function that save the file in the directory Downloads. Work only to Chrome Firefox And IE*/
 			if (navigator.appName =="Microsoft Internet Explorer" && window.ActiveXObject)
 			{
